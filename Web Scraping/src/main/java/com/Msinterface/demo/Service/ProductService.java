@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public interface ProductService {
 
-     List<Product> scrapeAndSaveProducts(String url) throws IOException;
-     List<Product> findAll();
+    List<Product> scrapeAndSaveProducts(String url) throws IOException;
+
+    List<Product> findAll();
 }

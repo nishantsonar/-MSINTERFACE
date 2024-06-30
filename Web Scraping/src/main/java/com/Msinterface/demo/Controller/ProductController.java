@@ -7,7 +7,6 @@ import com.Msinterface.demo.Entities.Product;
 import com.Msinterface.demo.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +21,7 @@ public class ProductController {
 
     @GetMapping("/scrape")
     public List<Product> scrapeProducts(@RequestParam String url) throws IOException {
-        System.out.println("INSIDE SCRAPEPRODUCTS....");
-        return  productService.scrapeAndSaveProducts(url);
+        return productService.scrapeAndSaveProducts(url);
     }
 
     @GetMapping
